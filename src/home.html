@@ -1,0 +1,102 @@
+<!-- Loading State -->
+<div id="loading-state">
+  <p>Loading...</p>
+</div>
+
+<!-- Logged In State -->
+<div id="logged-in-state" style="display: none;">
+  <h2>Welcome, <span id="user-display"></span>!</h2>
+  <p>You are logged in.</p>
+  
+  <p id="logged-in-error" style="color: red; display: none;"></p>
+  <p id="logged-in-success" style="color: green; display: none;"></p>
+
+  <!-- Change Password Section -->
+  <div id="change-password-toggle">
+    <button id="show-change-password-btn">Change Password</button>
+  </div>
+  
+  <div id="change-password-form" style="display: none;">
+    <h3>Change Password</h3>
+    <form id="change-password">
+      <label for="current-password">Current Password:</label>
+      <input type="password" id="current-password" required />
+      <br />
+      <label for="new-password">New Password:</label>
+      <input type="password" id="new-password" required />
+      <br />
+      <button type="submit">Update Password</button>
+      <button type="button" id="cancel-change-password">Cancel</button>
+    </form>
+  </div>
+
+  <button id="logout-btn">Logout</button>
+</div>
+
+<!-- Logged Out State -->
+<div id="logged-out-state" style="display: none;">
+  <p id="logged-out-error" style="color: red; display: none;"></p>
+  <p id="logged-out-success" style="color: green; display: none;"></p>
+
+  <!-- Forgot Password Section -->
+  <div id="forgot-password-section" style="display: none;">
+    <h2>Recover Password</h2>
+    <form id="recover-password-form">
+      <label for="recovery-email">Email:</label>
+      <input type="email" id="recovery-email" required />
+      <br />
+      <button type="submit">Send Reset Email</button>
+      <button type="button" id="back-to-login">Back to Login</button>
+    </form>
+  </div>
+
+  <!-- Main Auth Section -->
+  <div id="main-auth-section">
+    <h2>Sign Up</h2>
+    <form id="signup-form">
+      <label for="signup-email">Email:</label>
+      <input type="email" id="signup-email" required />
+      <br />
+      <label for="signup-password">Password:</label>
+      <input type="password" id="signup-password" required />
+      <br />
+      <button type="submit">Sign up with email</button>
+    </form>
+
+    <h2>Login</h2>
+    <form id="login-form">
+      <label for="login-email">Email:</label>
+      <input type="email" id="login-email" required />
+      <br />
+      <label for="login-password">Password:</label>
+      <input type="password" id="login-password" required />
+      <br />
+      <button type="submit">Login with email</button>
+    </form>
+    <button type="button" id="forgot-password-btn">Forgot Password?</button>
+
+    <h2>Or</h2>
+    <button id="google-login-btn">Sign in with Google</button>
+
+    <h2>Phone Login</h2>
+    <div id="phone-login-section">
+      <form id="phone-login-form">
+        <label for="phone-number">Enter your number +880 1234567890</label>
+        <input type="tel" id="phone-number" placeholder="+1234567890" required />
+        <br />
+        <button type="submit">Send OTP</button>
+      </form>
+      <div id="recaptcha-container"></div>
+    </div>
+
+    <div id="otp-section" style="display: none;">
+      <form id="otp-form">
+        <label for="otp-code">Enter OTP Code:</label>
+        <input type="text" id="otp-code" placeholder="000000" maxlength="6" required />
+        <br />
+        <button type="submit">Verify OTP</button>
+        <button type="button" id="back-from-otp">Back</button>
+      </form>
+    </div>
+  </div>
+</div>
